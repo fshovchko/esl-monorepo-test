@@ -1,0 +1,6 @@
+{
+  "packages": {
+		"packages/package-1": {},
+		"packages/package-2": {}
+  }
+}
