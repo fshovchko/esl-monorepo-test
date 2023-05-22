@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.1.0](https://github.com/fshovchko/esl-monorepo-test/compare/release-please-action-v1.0.0...release-please-action-v1.1.0) (2023-05-22)
+
+
+### Features
+
+* package ([6885701](https://github.com/fshovchko/esl-monorepo-test/commit/6885701b8b9dea8e9cdf987148be113d3bc8b2a4))
+* test ([c7712a5](https://github.com/fshovchko/esl-monorepo-test/commit/c7712a5f8cada769de5615920ef83702383cf4ba))
+* test ([61064e3](https://github.com/fshovchko/esl-monorepo-test/commit/61064e396eeb2175022bc25657613a886ad60e78))
+* test ([e8c0f48](https://github.com/fshovchko/esl-monorepo-test/commit/e8c0f48315308f5ad0a51cfbbd3b31308fe5bda4))
+
 ## 1.0.0 (2023-05-22)
 
 
