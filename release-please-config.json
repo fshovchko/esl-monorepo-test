@@ -1,4 +1,10 @@
 {
+  "plugins": [{
+    "type": "node-workspace",
+    "merge": false
+  }],
+  "bump-minor-pre-major": true,
+  "bump-patch-for-minor-pre-major": true,
   "packages": {
 		"packages/package-1": {},
 		"packages/package-2": {}
