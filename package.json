@@ -1,0 +1,17 @@
+{
+  "name": "esl-monorepo-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "releaseit": "release-it",
+    "releaseit:dry-run": "release-it --dry-run"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@release-it/conventional-changelog": "^5.1.1",
+    "release-it": "^15.10.3"
+  }
+}
