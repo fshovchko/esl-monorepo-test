@@ -44,4 +44,4 @@ jobs:
         if: ${{ inputs.type == 'release' }}
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-        run: npx release-it
+        run: npx release-it --ci
