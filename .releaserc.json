@@ -1,6 +1,5 @@
 {
   "debug": true,
-  "extends": "semantic-release-monorepo",
   "branches": [
     "main",
     {"name": "main-beta", "channel": "beta", "prerelease": "beta"},
