@@ -16,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "@release-it/conventional-changelog": "^5.1.1",
+    "lerna": "^6.6.2",
     "release-it": "^15.10.3",
     "release-please": "^15.10.4"
   }
