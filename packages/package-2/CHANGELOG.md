@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.0](https://github.com/fshovchko/esl-monorepo-test/compare/package-2-v1.2.0...package-2-v1.3.0) (2023-05-23)
+
+
+### Features
+
+* test ([4bc77cf](https://github.com/fshovchko/esl-monorepo-test/commit/4bc77cf7a47e798098f10e4ebc80fbf31a4de8ef))
+* test ([d320a28](https://github.com/fshovchko/esl-monorepo-test/commit/d320a2816664b3dbdc0ca4cb6951899d6bea470a))
+
 ## [1.2.0](https://github.com/fshovchko/esl-monorepo-test/compare/package-2-v1.1.0...package-2-v1.2.0) (2023-05-22)
 
 
