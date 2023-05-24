@@ -1,0 +1,27 @@
+name: release-please
+
+on:
+  push:
+    branches:
+      - main-beta
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          default-branch: main-beta
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          versioning-strategy: default
+          release-type: node
+          prerelease: true
+          command: manifest
+          monorepo-tags: true
+          changelog-types: '[
+            {"type":"feat","section":"Features","hidden":false},
+            {"type":"fix","section":"Bug Fixes","hidden":false},
+            {"type":"chore","section":"Miscellaneous","hidden":false}
+          ]'
+          pull-request-title-pattern: 'chore${scope}: release${component} ${version}'
