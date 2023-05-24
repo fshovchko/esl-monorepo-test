@@ -16,9 +16,7 @@ jobs:
           node-version: 18.x
           registry-url: 'https://registry.npmjs.org'
       - name: Build Packages
-        run: |
-          npm install
-          npx lerna bootstrap
+        run: npx lerna bootstrap
 
       - name: Publish to NPM
         env:
