@@ -1,25 +1,44 @@
-name: Publish NPM Packages
-
+name: Publish
 on:
-  release:
-    types: published
+  workflow_dispatch:
+    inputs:
+      type:
+        description: 'Release Type'
+        required: true
+        default: 'dry-run'
+        type: choice
+        options:
+          - dry-run
+          - release
+          - release-beta
 
 jobs:
-  release-please:
+  publish:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
-    steps:
-      - run: echo "Test ${{ github.event.release.name }} Description ${{ github.event.release.body }} Output ${{ github.event.release.outputs }} Output ${{github.event.release.output }}"
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-      - name: Setup Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: 18.x
-          registry-url: 'https://registry.npmjs.org'
-      - name: Build Packages
-        run: npx lerna bootstrap
 
-      - name: Publish to NPM
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-        run: npx lerna publish from-package --yes --no-verify-access
+    steps:
+    - name: "Checkout"
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: "Use NodeJS 14"
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: "Version and publish"
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git config user.name "${{ github.actor }}"
+        git config user.email "${{ github.actor}}@users.noreply.github.com"
+
+        if [ ${{ github.base_ref }} = development ]; then
+          npx lerna version --conventional-commits --conventional-prerelease --preid beta --yes
+        else
+          npx lerna version --conventional-commits --conventional-graduate --yes
+        fi
+
+        npx lerna publish from-git --yes
