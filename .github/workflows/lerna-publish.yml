@@ -9,13 +9,7 @@ on:
       ref:
         description: 'commit/tag/branch to release from'
         required: true
-
-jobs:
-  setup:
-    uses: looker-open-source/reusable-actions/.github/workflows/primary-version.yml@main
-
   publish:
-    needs: setup
     runs-on: ubuntu-latest
     steps:
     - name: Publish to NPM registry
