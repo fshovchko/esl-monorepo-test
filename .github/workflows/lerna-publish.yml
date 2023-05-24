@@ -14,13 +14,13 @@ jobs:
           node-version: 14
           registry-url: 'https://registry.npmjs.org'
       - name: Build Packages
-        if: ${{ steps.release.outputs.releases_created }}
+        if: ${{ github.event.release.outputs.releases_created }}
         run: |
           npm install
           npx lerna bootstrap
 
       - name: Publish to NPM
-        if: ${{ steps.release.outputs.releases_created }}
+        if: ${{ github.event.release.outputs.releases_created }}
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         run: npx lerna publish from-package --yes --no-verify-access
