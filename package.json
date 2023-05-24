@@ -3,6 +3,7 @@
   "version": "1.2.0",
   "description": "",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "releaseit": "release-it",
@@ -15,5 +16,9 @@
     "lerna": "^6.6.2",
     "release-it": "^15.10.3",
     "release-please": "^15.10.4"
-  }
+  },
+  "workspaces": [
+    "packages/*",
+    "app"
+  ]
 }
