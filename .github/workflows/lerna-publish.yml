@@ -8,19 +8,24 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
+      - id: interrogate
+        uses: actions/github-script@v6
+        with:
+            github-token: ${{secrets.GITHUB_TOKEN}}
+            retries: 5
+            script: |
+              console.log(`github.event.release`);
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
           node-version: 14
           registry-url: 'https://registry.npmjs.org'
       - name: Build Packages
-        if: ${{ github.event.release.outputs.releases_created }}
         run: |
           npm install
           npx lerna bootstrap
 
       - name: Publish to NPM
-        if: ${{ github.event.release.outputs.releases_created }}
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         run: npx lerna publish from-package --yes --no-verify-access
