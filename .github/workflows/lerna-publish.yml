@@ -9,6 +9,7 @@ on:
       ref:
         description: 'commit/tag/branch to release from'
         required: true
+jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
