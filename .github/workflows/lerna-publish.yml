@@ -30,12 +30,9 @@ jobs:
 
     - name: "Version and publish"
       env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
       run: |
-        git config user.name "${{ github.actor }}"
-        git config user.email "${{ github.actor}}@users.noreply.github.com"
-
-        if [ ${{ github.base_ref }} = development ]; then
+        if [ ${{ inputs.type == 'release-beta' }} ]; then
           npx lerna version --conventional-commits --conventional-prerelease --preid beta --yes
         else
           npx lerna version --conventional-commits --conventional-graduate --yes
