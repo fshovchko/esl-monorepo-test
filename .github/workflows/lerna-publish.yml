@@ -8,17 +8,12 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
-      - id: interrogate
-        uses: actions/github-script@v6
-        with:
-            github-token: ${{secrets.GITHUB_TOKEN}}
-            retries: 5
-            script: |
-              console.log(github.event.release);
+      - name: Checkout Repository
+        uses: actions/checkout@v2
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: 14
+          node-version: 18.x
           registry-url: 'https://registry.npmjs.org'
       - name: Build Packages
         run: |
