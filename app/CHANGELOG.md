@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.6.0](https://github.com/fshovchko/esl-monorepo-test/compare/esl-monorepo-test-app-v1.5.0...esl-monorepo-test-app-v1.6.0) (2023-05-24)
+
+
+### Features
+
+* test ([2122700](https://github.com/fshovchko/esl-monorepo-test/commit/2122700518a81d7d01b29c5ab95f5e6427188ecc))
+
+
+### Bug Fixes
+
+* test ([e6a7ca1](https://github.com/fshovchko/esl-monorepo-test/commit/e6a7ca1e7fabf3f9f04f8fd46cdcf6aaa0f03fcc))
+
 ## [1.5.0](https://github.com/fshovchko/esl-monorepo-test/compare/esl-monorepo-test-app-v1.4.0...esl-monorepo-test-app-v1.5.0) (2023-05-24)
 
 
