@@ -10,7 +10,6 @@ jobs:
     steps:
       - name: Setup Node
         uses: actions/setup-node@v1
-        if: ${{ steps.release.outputs.releases_created }}
         with:
           node-version: 14
           registry-url: 'https://registry.npmjs.org'
