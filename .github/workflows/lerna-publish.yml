@@ -8,13 +8,11 @@ on:
         default: 'dry-run'
         type: choice
         options:
-          - dry-run
           - release
           - release-beta
 
 jobs:
   publish:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
