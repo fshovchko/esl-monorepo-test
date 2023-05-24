@@ -19,6 +19,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Publish to NPM registry
-      run: $(npm bin)/lerna publish from-package --yes --no-verify-access
+      run: npx lerna publish from-package --yes --no-verify-access
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
