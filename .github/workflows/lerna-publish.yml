@@ -5,10 +5,34 @@ on:
     types: published
 
 jobs:
-  publish:
+  release-please:
     runs-on: ubuntu-latest
     steps:
-    - name: Publish to NPM registry
-      run: npx lerna publish from-package --yes --no-verify-access
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - uses: google-github-actions/release-please-action@v2
+        id: release
+        with:
+          command: manifest
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          default-branch: main
+
+      # The logic below handles the npm publication:
+      - name: Checkout Repository
+        if: ${{ steps.release.outputs.releases_created }}
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        if: ${{ steps.release.outputs.releases_created }}
+        with:
+          node-version: 14
+          registry-url: 'https://registry.npmjs.org'
+      - name: Build Packages
+        if: ${{ steps.release.outputs.releases_created }}
+        run: |
+          npm install
+          npx lerna bootstrap
+
+      - name: Publish to NPM
+        if: ${{ steps.release.outputs.releases_created }}
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        run: npx lerna publish from-package --yes --no-verify-access
