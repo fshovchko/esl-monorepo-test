@@ -16,16 +16,8 @@ jobs:
 
   publish:
     needs: setup
-    if: >
-      (github.event.inputs) ||
-      (startsWith(github.event.release.tag_name, 'sdk-codegen-all') &&
-      !github.event.release.draft &&
-      !github.event.release.prerelease)
     runs-on: ubuntu-latest
-      - name: Check that Looker is ready
-        run: |
-          ${{ github.workspace }}/.github/scripts/wait_for_looker.sh
-
+      steps:
       - name: Publish to NPM registry
         run: $(npm bin)/lerna publish from-package --yes --no-verify-access
         env:
