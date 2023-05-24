@@ -1,5 +1,5 @@
 {
-  "name": "package-1",
+  "name": "esl-monorepo-test-package-1",
   "version": "1.5.0",
   "description": "",
   "main": "index.js",
@@ -8,5 +8,5 @@
   },
   "author": "",
   "license": "ISC",
-  "gitHead": "c6b13af106ce2834436f7c20aea9feef830ea882"
+  "gitHead": "350cf2bba38e31a660df67fc902efd50a795528e"
 }
