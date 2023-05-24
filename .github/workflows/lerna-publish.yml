@@ -8,8 +8,7 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-        echo "Name: ${{ github.event.release.name }} Description: ${{ github.event.release.body }} Output {{github.event.release.outputs}} Output {{github.event.release.output}}"
+      - run: echo "Test ${{ github.event.release.name }} Description ${{ github.event.release.body }} Output {{github.event.release.outputs}} Output {{github.event.release.output}}"
       - name: Checkout Repository
         uses: actions/checkout@v2
       - name: Setup Node
