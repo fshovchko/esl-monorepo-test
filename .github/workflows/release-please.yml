@@ -12,7 +12,9 @@ jobs:
         with:
           default-branch: main
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          versioning-strategy: default
           release-type: node
+          prerelease: true
           command: manifest
           monorepo-tags: true
           changelog-types: '[
