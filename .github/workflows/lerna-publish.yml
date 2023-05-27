@@ -5,7 +5,7 @@ on:
       type:
         description: 'Release Type'
         required: true
-        default: 'dry-run'
+        default: 'release'
         type: choice
         options:
           - release
