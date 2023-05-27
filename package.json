@@ -11,7 +11,7 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "@release-it/conventional-changelog": "^5.1.1",
     "lerna": "^6.6.2",
     "release-it": "^15.10.3",
