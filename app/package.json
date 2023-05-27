@@ -1,5 +1,5 @@
 {
-  "name": "esl-monorepo-test-app",
+  "name": "@f.shovchko/esl-monorepo-test-app",
   "version": "1.13.0",
   "description": "",
   "main": "index.js",
