@@ -1,9 +1,9 @@
-name: release-please
+name: release-please-beta
 
 on:
   push:
     branches:
-      - main
+      - main-beta
 
 jobs:
   release-please:
@@ -12,10 +12,11 @@ jobs:
       - uses: google-github-actions/release-please-action@v3
         id: release
         with:
-          default-branch: main
+          default-branch: main-beta
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           versioning-strategy: default
           release-type: node
+          prerelease: true
           command: manifest
           monorepo-tags: true
           changelog-types: '[
