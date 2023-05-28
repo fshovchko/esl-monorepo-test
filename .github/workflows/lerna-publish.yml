@@ -48,5 +48,5 @@ jobs:
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       run: |
-        npx lerna version --conventional-commits --conventional-graduate --yes
+        npx lerna version --conventional-commits --yes
         npx lerna publish from-package --yes --no-verify-access
