@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.12.10](https://github.com/fshovchko/esl-monorepo-test/compare/esl-monorepo-test-package-2@1.12.9...esl-monorepo-test-package-2@1.12.10) (2023-05-28)
+
+
+### Bug Fixes
+
+* **pckg-2:** test ([117d63b](https://github.com/fshovchko/esl-monorepo-test/commit/117d63bfa3d1218be3662fe1eba4f88c6fb1af69))
+
+
+
+
+
 ## [1.12.9](https://github.com/fshovchko/esl-monorepo-test/compare/esl-monorepo-test-package-2@1.12.8...esl-monorepo-test-package-2@1.12.9) (2023-05-28)
 
 **Note:** Version bump only for package esl-monorepo-test-package-2

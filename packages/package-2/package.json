@@ -1,6 +1,6 @@
 {
   "name": "esl-monorepo-test-package-2",
-  "version": "1.12.9",
+  "version": "1.12.10",
   "description": "",
   "main": "index.js",
   "scripts": {
