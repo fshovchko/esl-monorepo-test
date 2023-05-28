@@ -1,4 +1,4 @@
-name: Publish
+name: Lerna Publish
 on:
   workflow_dispatch:
     inputs:
