@@ -41,6 +41,7 @@ jobs:
     - name: Beta Release
       if: ${{ inputs.type == 'release-beta' }}
       env:
+        GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       run: |
         npx lerna version --conventional-commits --conventional-prerelease --create-release=github --preid beta --yes
@@ -48,6 +49,7 @@ jobs:
     - name: Release
       if: ${{ inputs.type == 'release' }}
       env:
+        GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       run: |
         npx lerna version --conventional-commits --create-release=github --yes
