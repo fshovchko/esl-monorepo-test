@@ -36,42 +36,6 @@ jobs:
         git remote set-url origin https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/$GITHUB_REPOSITORY
       env:
         GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-    - name: Tag Check
-      id: tag_check
-      run: |
-        GET_API_URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/git/ref/tags/v${CURRENT_VERSION}"
-        http_status_code=$(curl -LI $GET_API_URL -o /dev/null -w '%{http_code}\n' -s \
-          -H "Authorization: token ${GITHUB_TOKEN}")
-        if [ "$http_status_code" -ne "404" ] ; then
-          echo "::set-output name=exists_tag::true"
-        else
-          echo "::set-output name=exists_tag::false"
-        fi
-      env:
-        GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-    - name: Create Git Tag
-      if: steps.tag_check.outputs.exists_tag == 'false'
-      uses: pkgdeps/git-tag-action@v2
-      with:
-        version: ${{ env.CURRENT_VERSION }}
-        github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-        github_repo: ${{ github.repository }}
-        git_commit_sha: ${{ github.sha }}
-        git_tag_prefix: "v"
-    - name: Create Release
-      id: create_release
-      if: steps.tag_check.outputs.exists_tag == 'false' && github.event.pull_request.merged == true
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-      with:
-        tag_name: v${{ env.CURRENT_VERSION }}
-        # Copy Pull Request's tile and body to Release Note
-        release_name: ${{ github.event.pull_request.title }}
-        body: |
-          ${{ github.event.pull_request.body }}
-        draft: false
-        prerelease: false
     - name: Build Packages
       run: npx lerna bootstrap
     - name: Beta Release
@@ -79,12 +43,12 @@ jobs:
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       run: |
-        npx lerna version --conventional-commits --conventional-prerelease --preid beta --yes
+        npx lerna version --conventional-commits --conventional-prerelease --create-release=github --preid beta --yes
         npx lerna publish from-package --yes --no-verify-access
     - name: Release
       if: ${{ inputs.type == 'release' }}
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       run: |
-        npx lerna version --conventional-commits --yes
+        npx lerna version --conventional-commits --create-release=github --yes
         npx lerna publish from-package --yes --no-verify-access
