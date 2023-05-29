@@ -3,16 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [1.12.0](https://github.com/fshovchko/esl-monorepo-test/compare/esl-monorepo-test-package-1@1.11.1...esl-monorepo-test-package-1@1.12.0) (2023-05-24)
+## [1.13.0-beta.1](https://github.com/fshovchko/esl-monorepo-test/compare/esl-monorepo-test-package-1-v1.12.0-beta.1...esl-monorepo-test-package-1-v1.13.0-beta.1) (2023-05-29)
 
 
 ### Features
 
+* add licenses ([350cf2b](https://github.com/fshovchko/esl-monorepo-test/commit/350cf2bba38e31a660df67fc902efd50a795528e))
+* add release-please ([d91d99d](https://github.com/fshovchko/esl-monorepo-test/commit/d91d99d27b6262b89b881a5b7ca91a8c0ed40729))
+* package ([6885701](https://github.com/fshovchko/esl-monorepo-test/commit/6885701b8b9dea8e9cdf987148be113d3bc8b2a4))
+* **package-1:** test ([6fdd829](https://github.com/fshovchko/esl-monorepo-test/commit/6fdd8291237b33be88e7f414cf028cc031ee6b96))
+* **package-1:** test ([aadae51](https://github.com/fshovchko/esl-monorepo-test/commit/aadae51faef446081e7bf052074d26e671610eb7))
+* remove githead ([d77b289](https://github.com/fshovchko/esl-monorepo-test/commit/d77b2895e5defe4f0a3612ecd6badfd622692e3d))
+* rename packages ([8ad3221](https://github.com/fshovchko/esl-monorepo-test/commit/8ad32212d0b8cbdb0e9efb9b24ed5a1fbd21744c))
+* test ([2345d08](https://github.com/fshovchko/esl-monorepo-test/commit/2345d08b2d3b058b3da51c329df8dcedfdc3f671))
 * test ([c966f3e](https://github.com/fshovchko/esl-monorepo-test/commit/c966f3e8a9eff66e97ea1a6183d756c5fab649d4))
+* test ([ce65f08](https://github.com/fshovchko/esl-monorepo-test/commit/ce65f0822f04768a3c3711fb984226183ebc368b))
+* test ([4be3018](https://github.com/fshovchko/esl-monorepo-test/commit/4be301802a51f911f8133e6bd745ce50df4ec324))
+* test ([cf1943a](https://github.com/fshovchko/esl-monorepo-test/commit/cf1943a1f23d5030b2824b741f65082260ba4823))
+* test ([2a2dcb8](https://github.com/fshovchko/esl-monorepo-test/commit/2a2dcb8f32cd2002e35b33b4cfc726981a3d98e4))
+* test ([9b44f95](https://github.com/fshovchko/esl-monorepo-test/commit/9b44f95a4fca6cdb66e384aae3e6d91c7f118011))
+* test ([6239f69](https://github.com/fshovchko/esl-monorepo-test/commit/6239f693250c1ebad8b5a60fc724b14a7b66fd8d))
+* test ([ddc9bc7](https://github.com/fshovchko/esl-monorepo-test/commit/ddc9bc700ce5c5e86d735c3fc5154255db6ef1dd))
+* test ([932b7ad](https://github.com/fshovchko/esl-monorepo-test/commit/932b7ad67472760d08ff1b8aa147d8bb1cf11965))
+* test ([6ba9636](https://github.com/fshovchko/esl-monorepo-test/commit/6ba9636538531f0fd7831f976299aa3f1d19c236))
+* test ([4d8e6b9](https://github.com/fshovchko/esl-monorepo-test/commit/4d8e6b96d566064a659087b9ffd7e6520f35ec90))
+
+## [1.12.0-beta.1](https://github.com/fshovchko/esl-monorepo-test/compare/esl-monorepo-test-package-1-v1.11.0...esl-monorepo-test-package-1-v1.12.0) (2023-05-29)
 
 
+### Features
 
-
+* **package-1:** test ([6fdd829](https://github.com/fshovchko/esl-monorepo-test/commit/6fdd8291237b33be88e7f414cf028cc031ee6b96))
+* **package-1:** test ([aadae51](https://github.com/fshovchko/esl-monorepo-test/commit/aadae51faef446081e7bf052074d26e671610eb7))
+* test ([2345d08](https://github.com/fshovchko/esl-monorepo-test/commit/2345d08b2d3b058b3da51c329df8dcedfdc3f671))
+* test ([c966f3e](https://github.com/fshovchko/esl-monorepo-test/commit/c966f3e8a9eff66e97ea1a6183d756c5fab649d4))
 
 ## [1.11.1](https://github.com/fshovchko/esl-monorepo-test/compare/esl-monorepo-test-package-1@1.12.0-beta.0...esl-monorepo-test-package-1@1.11.1) (2023-05-24)
 
