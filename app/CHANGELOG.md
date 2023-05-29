@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [1.11.0](https://github.com/fshovchko/esl-monorepo-test/compare/esl-monorepo-test-app@1.11.0-beta.0...esl-monorepo-test-app@1.11.0) (2023-05-24)
+# [1.11.0-beta.1](https://github.com/fshovchko/esl-monorepo-test/compare/esl-monorepo-test-app@1.11.0-beta.0...esl-monorepo-test-app@1.11.0) (2023-05-24)
 
 
 ### Features
@@ -15,6 +15,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 # Changelog
+
+## [1.11.0-beta.1](https://github.com/fshovchko/esl-monorepo-test/compare/esl-monorepo-test-app-v1.10.0...esl-monorepo-test-app-v1.11.0) (2023-05-29)
+
+
+### Features
+
+* test ([2aabdfa](https://github.com/fshovchko/esl-monorepo-test/commit/2aabdfad734784c05d04469ce3c42b1b0f4b1a71))
+* test ([1452cb0](https://github.com/fshovchko/esl-monorepo-test/commit/1452cb0494d81e31dbb98baeb6b2290524c42171))
+* test ([9dd6d12](https://github.com/fshovchko/esl-monorepo-test/commit/9dd6d125f21702c4132dabda150c3179ee8c5d2a))
+* test ([5873141](https://github.com/fshovchko/esl-monorepo-test/commit/58731419795f83d4023d2f29109e4e4102f66618))
+* test ([8986c64](https://github.com/fshovchko/esl-monorepo-test/commit/8986c64c791ae1ccf116d9b9ef49408b8c3a6110))
+* test ([61d57e7](https://github.com/fshovchko/esl-monorepo-test/commit/61d57e778ee5e030b15c811264e753790dcf21c2))
 
 ## [1.10.0](https://github.com/fshovchko/esl-monorepo-test/compare/esl-monorepo-test-app-v1.9.0...esl-monorepo-test-app-v1.10.0) (2023-05-24)
 
