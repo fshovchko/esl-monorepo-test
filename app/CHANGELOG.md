@@ -16,7 +16,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # Changelog
 
-## [1.11.0](https://github.com/fshovchko/esl-monorepo-test/compare/esl-monorepo-test-app-v1.10.0...esl-monorepo-test-app-v1.11.0) (2023-05-29)
+## [1.11.0-beta.1](https://github.com/fshovchko/esl-monorepo-test/compare/esl-monorepo-test-app-v1.10.0...esl-monorepo-test-app-v1.11.0) (2023-05-29)
 
 
 ### Features
