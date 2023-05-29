@@ -8,6 +8,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
+* **pckg-2:** test ([ad527d2](https://github.com/fshovchko/esl-monorepo-test/commit/ad527d24518eb6eb46be6436da1acd890cf829eb))
 * test ([042d041](https://github.com/fshovchko/esl-monorepo-test/commit/042d0414fc748c6edefc99349ef0136e9a8996f2))
 
 ## [1.10.1](https://github.com/fshovchko/esl-monorepo-test/compare/esl-monorepo-test-package-2@1.11.0-beta.0...esl-monorepo-test-package-2@1.10.1) (2023-05-24)

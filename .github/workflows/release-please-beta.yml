@@ -16,7 +16,7 @@ jobs:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           versioning-strategy: default
           release-type: node
-          prerelease: beta
+          prerelease: pre-release
           command: manifest
           monorepo-tags: true
           changelog-types: '[

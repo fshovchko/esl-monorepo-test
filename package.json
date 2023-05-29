@@ -5,17 +5,12 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "releaseit": "release-it",
-    "releaseit:dry-run": "release-it --dry-run"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@release-it/conventional-changelog": "^5.1.1",
-    "lerna": "^6.6.2",
-    "release-it": "^15.10.3",
-    "release-please": "^15.10.4"
+    "lerna": "^6.6.2"
   },
   "workspaces": [
     "packages/*",
