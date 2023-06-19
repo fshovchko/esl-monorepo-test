@@ -35,11 +35,6 @@ jobs:
         with:
           node-version: 18.x
           registry-url: 'https://registry.npmjs.org'
-      - name: Build Packages
-        if: ${{ steps.release.outputs.releases_created }}
-        run: |
-          npm install
-          npx lerna bootstrap
       - name: Publish to NPM
         if: ${{ steps.release.outputs.releases_created }}
         env:
