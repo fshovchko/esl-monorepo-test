@@ -39,6 +39,7 @@ jobs:
         if: ${{ steps.release.outputs.releases_created }}
         run: |
           npm install
+          npx lerna bootstrap
       - name: Publish to NPM
         if: ${{ steps.release.outputs.releases_created }}
         env:
