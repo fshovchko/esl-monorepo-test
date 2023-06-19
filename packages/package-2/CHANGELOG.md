@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.11.0](https://github.com/fshovchko/esl-monorepo-test/compare/esl-monorepo-test-package-2-v1.10.0...esl-monorepo-test-package-2-v1.11.0) (2023-06-19)
+
+
+### Features
+
+* **all:** test ([2bb3c81](https://github.com/fshovchko/esl-monorepo-test/commit/2bb3c81cbe99e714e231810c277a4084ba6b865d))
+* **app:** test ([a4d8317](https://github.com/fshovchko/esl-monorepo-test/commit/a4d8317884904d9a596e52cc393d5b8e30e0ec92))
+
+
+### Bug Fixes
+
+* **pckg-2:** test ([117d63b](https://github.com/fshovchko/esl-monorepo-test/commit/117d63bfa3d1218be3662fe1eba4f88c6fb1af69))
+
 ## [1.12.10](https://github.com/fshovchko/esl-monorepo-test/compare/esl-monorepo-test-package-2@1.12.9...esl-monorepo-test-package-2@1.12.10) (2023-05-28)
 
 
