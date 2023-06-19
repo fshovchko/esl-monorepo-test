@@ -26,3 +26,8 @@ jobs:
             {"type":"refactor", "section":"*MINOR VERSION*","hidden":false},
           ]'
           pull-request-title-pattern: 'chore${scope}: release${component} ${version}'
+      - name: Publish to NPM
+        if: ${{ steps.release.outputs.releases_created }}
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        run: npx lerna publish from-package --no-private --yes
