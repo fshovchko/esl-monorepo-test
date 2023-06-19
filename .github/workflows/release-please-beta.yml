@@ -34,15 +34,10 @@ jobs:
         uses: actions/setup-node@v1
         if: ${{ steps.release.outputs.releases_created }}
         with:
-          node-version: 14
+          node-version: 18.x
           registry-url: 'https://registry.npmjs.org'
-      - name: Build Packages
-        if: ${{ steps.release.outputs.releases_created }}
-        run: |
-          npm install
-          npx lerna bootstrap
       - name: Publish to NPM
         if: ${{ steps.release.outputs.releases_created }}
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-        run: npx lerna publish from-package --no-private --yes
+        run: npx lerna publish from-package --yes --no-verify-access
